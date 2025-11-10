@@ -21,11 +21,11 @@ const aiRoutes = require('./routes/ai');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: 'http://localhost:5173', methods: ['GET', 'POST'] }
+  cors: { origin: 'https://chat-app-6115e.web.app', methods: ['GET', 'POST'] }
 });
 app.set('io', io)
 // Middleware
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://chat-app-6115e.web.app' }));
 app.use(helmet());
 app.use(express.json());
 
